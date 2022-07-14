@@ -1,7 +1,6 @@
 import os
 import logging
 import asyncio
-from bot import app
 from pyrogram.types.messages_and_media.message import Message
 from database.filters_mdb import delete_all_files, delete_all_groups, delete_all_users
 from database.guncelTarih import guncelTarih
