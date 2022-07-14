@@ -1,6 +1,7 @@
 import os
 import logging
 import asyncio
+from bot import app
 from pyrogram.types.messages_and_media.message import Message
 from database.filters_mdb import delete_all_files, delete_all_groups, delete_all_users
 from database.guncelTarih import guncelTarih
@@ -35,7 +36,7 @@ async def start(client: Client, message: Message):
             )
             return
     except UserNotParticipant:
-        await client.send_message(
+        await app.send_message(
             chat_id=message.from_user.id,
             text="Merhaba bu botu sadece gruba üye olanlar kullanabilir eğer gruba üye olmak istiyorsan aşağıdaki butondan istek gönder eğer fake isim koyarsan yada profil fotoğrafını yoksa seni gruba kabul edemem!",
             reply_markup=InlineKeyboardMarkup(
