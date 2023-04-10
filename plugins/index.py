@@ -14,7 +14,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import FloodWait
 from utils import temp
 import re, time
-from plugins.pm_filter import ReadableTime
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
