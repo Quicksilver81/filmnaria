@@ -118,9 +118,6 @@ async def send_for_index(bot:Client, message:Message):
             [InlineKeyboardButton('Yes (DB)',
                                     callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}#dbindex')
             ],
-            [InlineKeyboardButton('Yes (Fast)',
-                                    callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}#fastindex')
-            ],
             [InlineKeyboardButton('Reject Index', callback_data='close_data')]]
         reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -136,10 +133,6 @@ async def send_for_index(bot:Client, message:Message):
         [
             InlineKeyboardButton('Yes (DB)',
                                 callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}#dbindex')
-        ],
-        [
-            InlineKeyboardButton('Yes (Fast)',
-                                callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}#fastindex')
         ],
         [
             InlineKeyboardButton('Reject Index',
